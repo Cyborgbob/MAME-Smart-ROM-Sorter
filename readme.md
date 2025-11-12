@@ -71,11 +71,11 @@ Follow these steps carefully. Remember our motto: **Excellent in, perfect out.**
     <tr>
       <td>
         <h3 align="center">🛑 PLEASE READ: A Note on Windows & Antivirus Warnings</h3>
-        [cite_start]<p align="center">When you first download and try to run the sorter, Windows is probably going to show a warning message[cite: 105]. [cite_start]It might be a big blue screen from Windows Defender saying "Windows protected your PC"[cite: 106].</p>
-        <p align="center"><strong>Please do not panic. [cite_start]This is a "false positive."</strong> [cite: 108] [cite_start]It looks scary, but it's okay[cite: 108].</p>
-        [cite_start]<p align="center">**Here’s why it happens:** I packaged the Python script into an easy-to-use executable file using a common tool called <strong>PyInstaller</strong>[cite: 109]. [cite_start]As just one person creating free tools and not a large software company, I haven't paid for a special digital signature to verify the file[cite: 110]. [cite_start]Windows sees an unsigned program it doesn't recognize and automatically gets suspicious[cite: 111].</p>
-        [cite_start]<p align="center">I give you my personal guarantee: the code is clean[cite: 112]. [cite_start]It does nothing except read your XML and copy your ROM files[cite: 113]. [cite_start]The full source code is public on this GitHub page for anyone to inspect[cite: 114].</p>
-        [cite_start]<p align="center"><strong>How to run it:</strong> When you see that blue "Windows protected your PC" screen, just click where it says "More info," and then you'll see a button appear that says "Run anyway." [cite: 115]</p>
+        <p align="center">When you first download and try to run the sorter, Windows is probably going to show a warning message. It might be a big blue screen from Windows Defender saying "Windows protected your PC".</p>
+        <p align="center"><strong>Please do not panic. This is a "false positive."</strong> It looks scary, but it's okay.</p>
+        <p align="center">**Here’s why it happens:** I packaged the Python script into an easy-to-use executable file using a common tool called <strong>PyInstaller</strong>. As just one person creating free tools and not a large software company, I haven't paid for a special digital signature to verify the file. Windows sees an unsigned program it doesn't recognize and automatically gets suspicious.</p>
+        <p align="center">I give you my personal guarantee: the code is clean. It does nothing except read your XML and copy your ROM files. The full source code is public on this GitHub page for anyone to inspect.</p>
+        <p align="center"><strong>How to run it:</strong> When you see that blue "Windows protected your PC" screen, just click where it says "More info," and then you'll see a button appear that says "Run anyway."</p>
       </td>
     </tr>
   </table>
