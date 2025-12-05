@@ -1,126 +1,122 @@
-# MAME Smart ROM Sorter (GUI + CLI) v4.1 ✨
+# MAME Smart ROM Sorter (GUI + CLI) v4.20 🚀
 
-**Status:** ✅ Tested & Production-Ready!
+**Status:** ✅ Tested & Production-Ready\!
+
+## 🚨 IMPORTANT: Windows Virus Warning (False Positive)
+
+**Please Read Before Downloading:**
+Because this program is a standalone `.exe` created by a solo developer (Technically Not a Technician) and not a large corporation, it does not have a digital signature. **Windows Defender and other antiviruses will likely flag this as a virus.**
+
+  * **This is a False Positive.**
+  * The code is **Open Source** (included in this repository) so you can verify it yourself.
+  * It does nothing but read your XML, filter your list, and copy your files.
+  * **To Run:** Click "More Info" -\> "Run Anyway" or add the folder to your exclusion list.
+
+-----
 
 ## What is This Tool? 🤔
 
-The **MAME Smart ROM Sorter** is a powerful tool designed to help arcade enthusiasts clean up messy MAME ROM collections and manage their arcade game collection. If you’ve ever downloaded a full MAME set, you know it’s packed with thousands of files you don’t need: console games, home computers, non-working games, and duplicates. This tool is your digital broom! 🧹
+The **MAME Smart ROM Sorter** is your "digital broom" for MAME collections. If you’ve ever downloaded a full MAME set, you know it’s packed with thousands of files you don't need: console games (SNES, Genesis), calculators, non-working prototypes, and duplicates.
 
-It turns a giant, overwhelming folder of files into a **lean, playable arcade collection** tailored specifically to your needs, making MAME ROM management simple.
+**v4.20** turns that overwhelming mess into a **clean, curated, arcade-only collection** tailored to *your* preferences.
 
----
+### ✨ New in v4.20 (The "Game Changer" Update)
+
+Based on community feedback (shoutout to **@johnmclain250**\!), we have completely rebuilt the engine:
+
+1.  **The Missing Assets Audit (Killer Feature):**
+
+      * **The Problem:** In the past, if a game didn't copy, you never knew why.
+      * **The Fix:** The tool now generates a detailed **Audit Report** in the log window. It tells you *exactly* what is missing—down to the specific `chd`, `sample`, or `bios` file—so you can go find it.
+
+2.  **Smart Filtering with `CatVer.ini`:**
+
+      * We replaced the old manual "blocklist" with the official `CatVer.ini` (Category/Version) system.
+      * **Result:** You can now filter by **Genre** (Platformer, Shooter, Fighter) and perfectly strip out non-arcade categories like "Tabletop," "Handheld," and "Computers" with zero false positives.
+
+3.  **Strict 1G1R (One Game, One ROM):**
+
+      * The tool prioritizes the **Parent** version of a game. If the Parent works, it ignores the 50+ clones/bootlegs, keeping your menu clean.
+
+-----
 
 ## 🧐 Before You Begin: What is MAME? (For the Complete Novice)
 
-If you're new to this, it can be confusing! Here are the basics in plain English:
+If you're new to this, it can be confusing\! Here are the basics:
 
-* **MAME:** This is the **emulator program** that lets you play old arcade games on a modern computer. Our tool helps you organize the game files *for* MAME, but it is **not** MAME itself. You'll need to get MAME separately.
-* **ROM:** Think of a ROM as a **digital copy of an arcade game**. It's usually a single `.zip` file (e.g., `pacman.zip`).
-* **Non-Merged ROM Set:** This is a type of collection where every single game's `.zip` file is complete and self-contained. Our tool requires this format because other set types have missing files, and our tool needs every game to be whole.
+  * **MAME:** The emulator program that plays the games. Our tool *organizes* the files for MAME, but it is not MAME itself.
+  * **ROM:** The digital copy of the game (e.g., `pacman.zip`).
+  * **Non-Merged ROM Set:** This is the type of collection our tool needs. Every game zip file must be "complete" and self-contained.
 
----
+-----
 
-## 🚀 Key Features (Why This Tool is a Game-Changer)
+## 🛠️ Prerequisites (What You Need)
 
--   **True Arcade-Only Filtering:** Accurately identifies and keeps *only* arcade games, filtering out the consoles, computers, and handhelds that clutter other sorting tools.
--   **Intelligent Sorting Hierarchy:** Automatically prioritizes the best version of each game, ensuring you get the official Parent ROM over clones, bootlegs, or hacks.
--   **Full Dependency Handling:** The script is smart enough to find and copy all the essential files a game needs to run. This means games that require a separate "digital console" (like Neo Geo games) or have large data files will just work, without you having to hunt down extra files.
--   **User-Friendly GUI:** A simple graphical interface for Windows users means you don't have to touch the command line. An `.exe` version is available for maximum portability.
--   **Save & Load Presets:** Save your filtering settings to a file to easily re-run the same sort later or share your cabinet's configuration.
+To use v4.20, you need **three** files in your folder.
 
----
+1.  **The Tool:** `MAME_Sorter.exe` (Download from Releases).
+2.  **The Brain:** `full.xml` (Your machine's map).
+      * *How to get it:* Open a command prompt in your MAME folder and type: `mame.exe -listxml > full.xml`
+3.  **The Filter:** `CatVer.ini` (**NEW for v4.20**)
+      * *How to get it:* Download it from [AntoPISA's Progetto Snaps](https://www.progettosnaps.net/catver/).
+      * *Why:* This file tells the sorter which games are "Fighters" and which are "Calculators."
 
-## ⚙️ Getting Started: Your Guide to a Clean ROM Set
+-----
 
-Follow these steps carefully. Remember our motto: **Excellent in, perfect out.**
+## 🚀 How to Use (Step-by-Step)
 
-### **Step 0: The Golden Rule (Please Read!)**
+1.  **Prepare Your Folder:** Create a new folder on your desktop. Put `MAME_Sorter.exe`, `full.xml`, and `CatVer.ini` inside it.
+2.  **Launch:** Double-click the `.exe`. You will see the new **Dashboard Interface**.
+3.  **Select Paths:**
+      * **Source Folder:** Point this to your messy "Full MAME Set."
+      * **Output Folder:** Point this to an empty folder where you want your clean games to go.
+4.  **Set Filters:**
+      * **Categories:** Uncheck things you don't want (e.g., *Print Club, Electromechanical*).
+      * **Genres:** (Optional) Only want *Shooters*? Uncheck everything else.
+5.  **Run:** Click **"Start Sorting"**.
+6.  **Review the Audit:** When finished, check the log window. It will list any files you are missing so you can fix your set\!
 
-<div align="center">
-  <table border="1" style="border-color: red; background-color: #fff0f0; padding: 10px;">
-    <tr>
-      <td>
-        <h3 align="center">⚠️ IMPORTANT ⚠️</h3>
-        <p align="center">For this program to work, you MUST place the <code>MAME_Sorter.exe</code> file in the <strong>SAME FOLDER</strong> as your MAME assets (your <code>roms</code> folder and the <code>full.xml</code> file).</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-### **Step 1: Prepare Your MAME Assets (The "Excellent In")**
-
-1.  **A Full Non-Merged MAME ROM Set:**
-    * **Why?** Our tool needs each game's `.zip` file to be complete. If you need to convert your set, check out this guide: [**How to Convert Merged to Non-Merged Sets**](https://youtu.be/miXMtHDUeb0)
-
-2.  **The `full.xml` File (The "Brain"):**
-    * **Why?** This file is the database our program uses to make all its smart decisions.
-    * **How to get it:** This is the only technical step! Open a command prompt or PowerShell in your MAME directory and run this command:
-        ```shell
-        mame.exe -listxml > full.xml
-        ```
-        *(Note: If you're in PowerShell, you might need to type `.\mame.exe -listxml > full.xml`)*
-    * This can take a few minutes. When it's done, copy the new `full.xml` file into the sorter's folder.
-
-3.  **(Optional but Recommended) Your `samples` Folder:**
-    * If you have a `samples` folder for extra game sounds, copy it into the sorter's folder.
-
-### **A Quick Warning: The "False Positive" Windows Alert**
-
-<div align="center">
-  <table border="1" style="border-color: #ffc; background-color: #fff9e6; padding: 10px;">
-    <tr>
-      <td>
-        <h3 align="center">🛑 PLEASE READ: A Note on Windows & Antivirus Warnings</h3>
-        <p align="center">When you first download and try to run the sorter, Windows is probably going to show a warning message. It might be a big blue screen from Windows Defender saying "Windows protected your PC".</p>
-        <p align="center"><strong>Please do not panic. This is a "false positive."</strong> It looks scary, but it's okay.</p>
-        <p align="center">**Here’s why it happens:** I packaged the Python script into an easy-to-use executable file using a common tool called <strong>PyInstaller</strong>. As just one person creating free tools and not a large software company, I haven't paid for a special digital signature to verify the file. Windows sees an unsigned program it doesn't recognize and automatically gets suspicious.</p>
-        <p align="center">I give you my personal guarantee: the code is clean. It does nothing except read your XML and copy your ROM files. The full source code is public on this GitHub page for anyone to inspect.</p>
-        <p align="center"><strong>How to run it:</strong> When you see that blue "Windows protected your PC" screen, just click where it says "More info," and then you'll see a button appear that says "Run anyway."</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-### **Step 2: Run the Program & Choose Filters**
-
-Double-click the `MAME_Sorter.exe` file. Click "Agree" on the welcome screen. Fill out the form to match your arcade cabinet's setup (players, buttons, control types, etc.).
-
-### **Step 3: Run the Sort & Enjoy!**
-
-Click the **"Run"** button. The program will start processing your files. When it's done, you'll find a new folder called **`filtered_mame_set`** containing your perfectly curated collection, ready to use!
-
----
-
-## 🎉 You Did It! Feeling Grateful?
-
-If this tool just saved you hours of tedious work, please consider supporting our future projects! A subscription or a small tip helps us keep making free, powerful tools for the community.
-
--   **📺 Subscribe on YouTube:** [Technically Not a Technician](https://www.youtube.com/channel/UCRZx8k-2Wxi9-5EEKHCpVlQ/?sub_confirmation=1)
--   **☕ Buy Me a Coffee:** [buymeacoffee.com/technicallynota](https://buymeacoffee.com/technicallynota)
-
----
+-----
 
 ## 📺 Helpful Resources & Video Guides
 
--   **New to MAME? Start Here!** A beginner-friendly guide to getting MAME set up.
-    * [**Mastering Mame and Relive Arcade Nostalgia BUT For Dummies!!**](https://www.youtube.com/watch?v=P4As2E070Vw)
+  * **New to MAME? Start Here\!**
+      * [**Mastering Mame and Relive Arcade Nostalgia BUT For Dummies\!\!**](https://www.youtube.com/watch?v=P4As2E070Vw)
+  * **Understanding Merged vs. Non-Merged Sets:**
+      * [**MAME ROMs Explained**](https://www.youtube.com/channel/UCRZx8k-2Wxi9-5EEKHCpVlQ)
+  * **The v4.20 Update Walkthrough:**
+      * *(Video Coming Soon\!)*
 
----
+-----
 
-## 🐛 Reporting Bugs & Feedback
+## ❤️ Community Credits
 
-Found an issue or have an idea for an improvement? Please report it on [the "Issues" tab of our GitHub repository](https://github.com/your-username/your-repo-name/issues). This helps us track and fix problems in a structured way.
+This update was driven by **you**.
 
----
+  * **@johnmclain250:** A massive thank you for your detailed testing. Your logs helped us identify the "Tiger Handheld" leak and the X-Men clone issues, directly leading to the `CatVer.ini` integration.
+  * **The r/MAME Community:** For documenting the metadata standards that make tools like this possible.
+
+-----
+
+## ☕ Support the Project
+
+This tool is 100% free and open source. If it saved you hours of organizing, a sub or a coffee helps keep the lights on\!
+
+  * **📺 Subscribe:** [Technically Not a Technician](https://www.youtube.com/channel/UCRZx8k-2Wxi9-5EEKHCpVlQ/?sub_confirmation=1)
+  * **☕ Buy Me a Coffee:** [buymeacoffee.com/technicallynota](https://buymeacoffee.com/technicallynota)
+
+-----
+
+## 🐛 Reporting Bugs
+
+Found an issue? Please report it on the [**Issues Tab**](https://www.google.com/search?q=https://github.com/Cyborgbob/MAME-Smart-ROM-Sorter/issues). Include your `filter_log.txt` if possible—it helps us debug instantly\!
+
+-----
 
 ## 📜 License
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**. This means you are free to share and adapt this work for non-commercial purposes, as long as you give appropriate credit and distribute any remixes under the same license. You can view the full license text in the `LICENSE` file.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.
 
----
-
-## ❤️ Credits & Support
-
-This tool was a collaborative effort between:
--   **Shawn Flanagan (Technically Not a Technician):** Concept, expert testing, and project direction.
--   **Bob Cogito (AI Assistant):** Code development, debugging, and documentation.
+  * **Free to Share:** Copy and redistribute.
+  * **Free to Adapt:** Remix and build upon.
+  * **NonCommercial:** You cannot sell this tool.
