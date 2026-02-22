@@ -162,4 +162,7 @@ This project is licensed under the **Creative Commons Attribution-NonCommercial-
 
 * **Free to Share:** Copy and redistribute.
 * **Free to Adapt:** Remix and build upon.
+
 * **NonCommercial:** You cannot sell this tool.
+<img width="1918" height="1078" alt="Screenshot 2026-02-22 175255" src="https://github.com/user-attachments/assets/0cf8ca91-40ce-4779-a0ca-4f0b871dc667" />
+
