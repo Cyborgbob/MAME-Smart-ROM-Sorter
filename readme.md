@@ -4,7 +4,8 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
 ![GitHub License](https://img.shields.io/github/license/Cyborgbob/MAME-Smart-ROM-Sorter?color=green)
 
-*(Insert a screenshot of the v4.45 GUI here. Just drag and drop the image file directly into the GitHub editor!)*
+<img width="1918" height="1078" alt="Screenshot 2026-02-22 180435" src="https://github.com/user-attachments/assets/eb837374-7b80-468d-8140-09252e1beef8" />
+
 
 **Status:** ✅ House Tested & Looking for external Testers!
 
@@ -165,4 +166,5 @@ This project is licensed under the **Creative Commons Attribution-NonCommercial-
 
 * **NonCommercial:** You cannot sell this tool.
 <img width="1918" height="1078" alt="Screenshot 2026-02-22 175255" src="https://github.com/user-attachments/assets/0cf8ca91-40ce-4779-a0ca-4f0b871dc667" />
+
 
