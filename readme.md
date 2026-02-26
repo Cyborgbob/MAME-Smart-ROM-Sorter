@@ -1,170 +1,131 @@
 # MAME Smart ROM Sorter (GUI + CLI) 🚀
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Cyborgbob/MAME-Smart-ROM-Sorter?color=blue&label=Latest%20Release)
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
+![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
 ![GitHub License](https://img.shields.io/github/license/Cyborgbob/MAME-Smart-ROM-Sorter?color=green)
 
-<img width="1918" height="1078" alt="Screenshot 2026-02-22 180435" src="https://github.com/user-attachments/assets/eb837374-7b80-468d-8140-09252e1beef8" />
+**The Digital Broom for your MAME Arcade Collection.** *Created by Shawn Flanagan & Mr. Bob "Blocks" Cogito (AI Thinking System)*
 
-
-**Status:** ✅ House Tested & Looking for external Testers!
+---
 
 ## 🚨 IMPORTANT: Windows Virus Warning (False Positive)
+Because this program is a standalone `.exe` built by independent creators and not signed by a massive corporation, **Windows Defender will likely flag this as a virus.**
 
-**Please Read Before Downloading:**
-Because this program is a standalone `.exe` created by a solo developer (Technically Not a Technician & Bob Cogito "AI Thinking System") and not a large corporation, it does not have a digital signature. **Windows Defender and other antiviruses will likely flag this as a virus.**
-
-* **This is a False Positive.**
-* The code is **Open Source** (included in this repository) so you can verify it yourself.
-* It does nothing but read your XML, filter your list, and copy your files.
-* **To Run:** Click "More Info" -> "Run Anyway" or add the folder to your exclusion list.
+* **This is a False Positive.** The Python source code is included in this repository for you to audit.
+* **To Run:** Click **"More Info"** -> **"Run Anyway"** or add the `.exe` to your antivirus exclusion list.
 
 ---
 
 ## What is This Tool? 🤔
+The **MAME Smart ROM Sorter** turns an overwhelming, multi-thousand-file MAME set into a **clean, curated, arcade-only collection** perfectly tailored to your hardware limits.
 
-The **MAME Smart ROM Sorter** is your "digital broom" for MAME collections. If you’ve ever downloaded a full MAME set, you know it’s packed with thousands of files you don't need: console games (SNES, Genesis), calculators, mahjong/casino games, non-working prototypes, and endless duplicates.
-
-This tool turns that overwhelming mess into a **clean, curated, arcade-only collection** perfectly tailored to your arcade cabinet or gamepad setup.
-
-### ✨ Features & Upgrades
-
-* **Smart Setup Wizard:** Drop the `.exe` in your MAME folder, and the tool will automatically command MAME to generate your `full.xml` and auto-download the latest `catver.ini` directly from GitHub!
-* **Smart Update Checker:** The tool silently checks GitHub on startup so you never miss a new version.
-* **Set Type Detection:** The engine actively scans your ROMs to ensure you are using a **Non-Merged set**, warning you if it detects incompatible Split or Merged files.
-* **Strict 1G1R (One Game, One ROM):** The tool intelligently groups games by family and picks the *absolute best* version based on your preferred Region and Language priority list.
-* **Hardware-Aware Dependency Engine:** It doesn't just copy the game ROM. It automatically identifies and copies required **BIOS sets**, **CHDs (Hard Drives)**, **Devices**, and **Audio Samples** needed to make the game actually run!
-* **Missing Assets Audit:** Generates a detailed Audit Report in the log telling you *exactly* which files are missing from your source folder so you can go find them.
-* **Granular Filtering:** Filter by Max Buttons, Control Type (Lightgun, Trackball, Analog), Screen Orientation, Release Decade, and Emulation Status (Working vs. Imperfect).
+### ✨ v4.74 Featured Upgrades
+* **Custom "TNT" Icon:** Includes the new custom arcade cabinet branding for a professional desktop experience.
+* **"Couch Co-op" Ready:** Defaults to a modern controller preset (4 Players / 8 Buttons).
+* **God Mode Metadata:** Integrates ProgettoSnaps and Controls.ini to definitively separate "Real Arcade" games from junk devices, slot machines, and mahjong boards.
+* **Hardware-Aware Engine:** Automatically identifies and copies required BIOS sets, CHDs, and Audio Samples needed for your specific collection.
 
 ---
 
-## 📜 Version History (v4.20 to v4.45 Highlights)
+## 🛠️ Visual User Guide (Step-by-Step)
 
-Since the last public release (v4.20), the engine has undergone massive upgrades. Here are the major milestones:
+### 1. The Welcome Screen
+Upon launch, you'll be greeted by the Joshua-inspired splash screen. Click **Agree & Continue** to proceed.
 
-* **v4.45 (The Experience Update):** Added native Windows background audio for that classic '80s hacker/arcade vibe, and completely eradicated "Ghost Files" and dummy devices from the Missing Assets log.
-* **v4.42 (The Community Update):** Introduced the GitHub Smart Update Checker and expanded the Operations Dashboard to include direct links to essential MAME community resources and local arcades.
-* **v4.36 (The Polish Update):** Added a real-time, determinate Progress Bar and live file counter for the copying phase.
-* **v4.35 (The Automation Update):** Introduced the Front-Loaded Smart Setup Wizard to automatically fetch missing `full.xml` and `catver.ini` files on startup.
-* **v4.31 (The Time Machine Update):** Added robust Decade Filtering to bucket games by release era (Pre-1970s through 2020s).
-* **v4.29 (The Safety Update):** Built the Set Type Detector to warn users if they accidentally try to use incompatible Split or Merged ROM sets. Added Hard Drive space validation to prevent crashes.
-* **v4.21 (The 1G1R Update):** Replaced brute-force XML parsing with high-speed memory streaming. Introduced the **One Game, One ROM** engine and the true hardware Dependency Graph (BIOS/Devices).
+> 🔊 **Experience the Nostalgia:** Upon launch, the app greets you with the classic `play_game.wav` cue: *"Do you want to play a game?"*
 
----
+<img width="1919" height="1079" alt="4 74 Welcome" src="https://github.com/user-attachments/assets/9e1b413c-6298-40da-a578-97cbc09c16ac" />
 
-## 🧐 Before You Begin: What is MAME? (For the Complete Novice)
+### 2. The Setup Wizard (First Run)
+If run from your MAME root, the app detects missing files. It offers to command MAME to build your `full.xml` and download 13 curated "God Mode" metadata files directly from the GitHub community.
 
-* **MAME:** The emulator program that plays the arcade games (does many other things too). Our tool *organizes* the arcade files for MAME, but it is not MAME itself.
-* **ROM:** The digital copy of the arcade game (e.g., `pacman.zip`).
-* **Non-Merged ROM Set:** This is the type of collection our tool explicitly needs. Every game zip file must be "complete" and self-contained.
+<img width="1919" height="1079" alt="4 74 XML   ini Pimp" src="https://github.com/user-attachments/assets/3f9a5804-2e67-485e-8ba9-168a8cfa87c4" />
 
----
+### 3. Paths & Configuration
+Verify your source and output directories. This links your ROMs to the metadata databases for advanced filtering.
 
-## 🛠️ Prerequisites & Placement
+<img width="1919" height="1079" alt="4 74 Path" src="https://github.com/user-attachments/assets/d784b252-729a-4117-95c2-8f5d9bed4622" />
 
-**WHERE TO PUT THE TOOL:** This program is designed to be placed and run **directly inside the root of your MAME folder** (where your `mame.exe` lives). While you *can* run it from anywhere and manually point it to your directories, running it from the MAME root allows the Smart Setup Wizard to automate the heavy lifting for you.
+### 4. Controls & Inputs
+New in v4.74, settings default to a **Couch Co-op** state. Enable **Strict Control Filtering** to ensure you only get games your cabinet hardware can actually play.
 
-To use the sorter, you need **three** files & a working MAME install with a Full Non-Merged ROMSET:
-1. **The Tool:** `MAME_Sorter.exe` (📥 [Download the Latest Release Here](https://github.com/Cyborgbob/MAME-Smart-ROM-Sorter/releases/latest)).
-2. **The Brain:** `full.xml` (Your machine's map. *The app can auto-generate this if placed in the MAME root!*)
-3. **The Filter:** `catver.ini` (*The app can auto-download this if placed in the MAME root!*)
+<img width="1919" height="1079" alt="4 74 controls" src="https://github.com/user-attachments/assets/35a75146-1d53-4d27-9cbb-4ddeab0abed8" />
 
----
+### 5. Advanced Game Filters
+The brain of the **1G1R (One Game, One ROM)** engine. Pick the absolute best version of every game, eliminating hundreds of redundant clones.
 
-## 🚀 How to Use (Step-by-Step)
+<img width="1919" height="1079" alt="4 74 Filters" src="https://github.com/user-attachments/assets/4f92c431-819b-4daa-8297-8a35709f0c99" />
 
-1. **Prepare Your Folder:** Drop `MAME_Sorter.exe` into your main MAME directory.
-2. **Launch & Setup:** Double-click the `.exe`. Click Agree on the Welcome Screen, then let the Smart Setup Wizard fetch/generate your XML and INI files.
-3. **Navigate the Tabs:**
-   * **Paths & Config:** Verify your Source ROMs folder and set an Output Base folder.
-   * **Controls:** Tell the app what hardware you have (e.g., "Max 2 Players, 6 Buttons, Joysticks only").
-   * **Filters:** Select your Emulation Status (e.g., Working Only) and enable **1G1R**.
-   * **Genres & Decades:** Uncheck the eras or game types you hate (e.g., Sports, Casino).
-   * **Locales:** Move your preferred languages/regions to the right box.
-4. **Operations:** Save your preset for later, and click **"🚀 RUN MAME SMART SORTER"**.
-5. **Review the Audit:** When finished, check the `filter_log.txt` file. It acts as a comprehensive pipeline summary and will list any files you are missing!
+### 6. Hierarchical Genre Curation
+Browse categories with full **mouse-wheel support**. Essential genres like **Fighters** and **Shooters** are pinned to the top with game examples (Pac-Man, Galaga) to make selection intuitive.
 
----
+<img width="1919" height="1079" alt="4 74 genres" src="https://github.com/user-attachments/assets/af54a4ff-1b38-4018-b398-b65243f09df4" />
 
-## 👨‍💻 For Developers (Running from Source)
+### 7. Release Decades
+A dedicated tab to filter by era. Want only the 1980s golden age? Uncheck the rest and keep your set era-accurate.
 
-Want to run the raw Python code instead of the `.exe`?
+<img width="1915" height="1079" alt="4 74 Decades" src="https://github.com/user-attachments/assets/c1d7659c-c18f-43ef-9b52-283cba7d827e" />
 
-1. Ensure **Python 3.8+** is installed on your system.
-2. The GUI requires `tkinter`. This is usually bundled with Windows Python installers, but Linux users may need to run `sudo apt-get install python3-tk`.
-3. Run the script: `python mame_sorter_tkinterv4.45.py`
+### 8. Regions & Languages
+Set your regional priority (e.g., USA > World > Japan). The 1G1R engine uses this list to decide which version of a game is the "best" for your collection.
+
+<img width="1919" height="1079" alt="4 74 Regions" src="https://github.com/user-attachments/assets/3d483e27-bd07-4519-9514-f233f658c9f6" />
+
+### 9. Operations & Dashboard
+Save your configuration as a `.json` preset, then hit the orange button to begin. 
+
+> 🏆 **The Finish Line:** When the sorting operation is successfully completed, you are rewarded with the final `game_over.wav` cue!
+
+<img width="1919" height="1079" alt="4 74 Operations" src="https://github.com/user-attachments/assets/d1a26c58-940f-4e13-a5eb-b705ee6f4b4e" />
 
 ---
 
-## 📺 Helpful Resources, Links & Guides
-
-Built right into the Operations Tab, we've provided a massive ecosystem dashboard to help you:
-
-**TNT Official Guides:**
-* 🌐 [TNT Official Website](https://www.technicallynotatechnician.com/)
-* ▶️ [MAME ROMs Made Easy](https://youtu.be/KvEklx52CsI)
-* ▶️ [ROM Filtering Guide](https://youtu.be/IXWbLji_5Jo)
-* 🛠️ [ClrMamePro Guide (Convert your ROM sets!)](https://youtu.be/miXMtHDUeb0)
-
-**MAME Community Ecosystem:**
-* 👾 [MAMEdev Official](https://www.mamedev.org/)
-* 📖 [MAME Wiki](https://wiki.mamedev.org/index.php?title=Main_Page)
-* 🗄️ [ArcadeItalia (ADB)](http://adb.arcadeitalia.net/)
-* 🖼️ [ProgettoSnaps (For Catver/Art assets)](https://www.progettosnaps.net/index.php)
-
-**Arcade Community Shoutouts:**
-* 🔥 [Team Encoder](https://www.team-encoder.com/)
-* 🚀 [Rogue Synapse (The Last Starfighter)](http://www.roguesynapse.com/games/last_starfighter.php)
-* 👁️ [Sinnesloschen (Polybius)](http://www.sinnesloschen.com/)
-* 🕹️ [Houston Arcade & Pinball Expo](https://www.houstonarcadeexpo.com/)
+## 🚀 How to Run (Quick Start)
+1. Drop `MAME_Smart_ROM_Sorter_v4.74.exe` into your main MAME directory.
+2. Launch and let the **Setup Wizard** gather your files.
+3. Select your hardware limits and preferred genres.
+4. Click **"🚀 RUN MAME SMART SORTER"**.
+5. Check `filter_log.txt` when done to see a full audit of your new set!
 
 ---
 
-## 🐛 Found a Bug? (How to Report)
+## 🏛️ The Arcade Hall of Fame & Resources
+This tool stands on the shoulders of giants. We want to extend a massive **Thank You** to the following projects, developers, and communities that keep the arcade dream alive. 
 
-If you run into an issue or a game isn't filtering correctly, we want to fix it! To help us hunt down the bug quickly, please report it via the [**GitHub Issues Tab**](https://github.com/Cyborgbob/MAME-Smart-ROM-Sorter/issues) or shoot us an email at `technicallynotatechnician@gmail.com` with the following information:
+### The Data Gods (Metadata Providers)
+* 🗄️ **[ProgettoSnaps](https://www.progettosnaps.net/index.php)**: The legendary Italian database providing the core CatVer, Mature, and Series categorizations.
+* 📦 **[AntoPISA GitHub](https://github.com/AntoPISA/MAME_SupportFiles)**: For hosting the automated INI repositories.
+* 🕹️ **[Controls.dat Project (ArcadeControls)](https://controls.arcadecontrols.com/)**: The absolute gold standard for mapping arcade hardware inputs to MAME XML.
+* 🗄️ **[Arcade Database (ADB)](http://adb.arcadeitalia.net/)**: The ultimate web-based MAME encyclopedia by ArcadeItalia.
+* 👥 **[NPlayers (Belgium)](https://nplayers.arcadebelgium.be/)**: For determining true simultaneous multiplayer vs. alternating play.
 
-1. **The Details:** What exactly went wrong? (e.g., *"Space Invaders is missing!"* or *"The app froze when I clicked X"*).
-2. **Your Preset:** Please attach the `.json` preset file you used.
-3. **Your Log:** Please attach the full `filter_log.txt` generated after your run.
+### The Titans (Core Emulation)
+* 👾 **[MAMEdev Official](https://www.mamedev.org/)**: For preserving video game history.
+* 📖 **[MAME Wiki](https://wiki.mamedev.org/index.php?title=Main_Page)**: The ultimate technical resource.
 
-*Note: Without your preset and full log file, it is extremely difficult to diagnose the issue!*
+### The Legends & Friends of the Channel
+* 🚀 **Doc from [Rogue Synapse](http://www.roguesynapse.com/games/last_starfighter.php)**: Keeping the *Last Starfighter* dream alive.
+* 🔥 **[Team Encoder](https://www.team-encoder.com/)**: Legends in arcade modding and hardware hacking.
+* 👁️ **[Sinnesloschen (Polybius)](http://www.sinnesloschen.com/)** & **[Polybius Archive](https://www.coinop.org/game/103223/polybius)**: Because the truth is out there.
+* 🕹️ **[Houston Arcade Expo](https://www.houstonarcadeexpo.com/)**: One of the best arcade shows on earth.
 
----
+### The Architects & Testers
+* **Mr. Bob "Blocks" Cogito**: Co-creator and AI Logic Engine.
+* **TravisK-i1e**: Setup Wizard inspiration.
+* **Marcus**: 2-Way Joystick and Decades filter logic.
+* **@johnmclain250**: 1G1R engine testing and bug hunting.
 
-## ☕ Support & Contact
-
-This tool is 100% free and open source. If it saved you hours of organizing, a sub or a coffee helps keep the lights on!
-
-* 📺 **Subscribe:** [Technically Not a Technician on YouTube](https://www.youtube.com/channel/UCRZx8k-2Wxi9-5EEKHCpVlQ/?sub_confirmation=1)
-* ☕ **Buy Me a Coffee:** [buymeacoffee.com/technicallynota](https://buymeacoffee.com/technicallynota)
-
-**Want to chat, or just bullshit with me?** Shoot me an email: `technicallynotatechnician@gmail.com`
-
----
-
-## ❤️ Community Credits
-
-This tool was forged in the fires of community testing. A massive thank you to the following early adopters who provided the logs, feedback, and feature requests that shaped this version:
-
-* **Marcus:** For detailed bug hunting that directly led to the 2-Way Joystick patch, the Tiered Emulation Status dropdown, and the concept for the Decades filter.
-* **@johnmclain250:** Your sandbox testing and filter logs helped us identify the "Clone Leak" and the X-Men player count bugs, directly leading to the creation of the 1G1R engine and the Deep Scan logic.
-* **@Englad666:** For sending in detailed logs to help us iron out complex control and orientation filtering.
-* **@TravisK-i1e:** For representing the RetroArch community and inspiring the "Smart Setup Wizard" that fetches missing files from GitHub.
-* **@FermentedGrumpyGrapeSqueezit:** For the emulation trivia and regional ROM hierarchy insights.
-* **The r/MAME Community:** For documenting the metadata standards that make tools like this possible.
+### TNT Official Links & Video Guides
+* 🌐 **[TNT Official Website](https://www.technicallynotatechnician.com/)**
+* 🎥 **[Subscribe on YouTube](https://www.youtube.com/channel/UCRZx8k-2Wxi9-5EEKHCpVlQ/?sub_confirmation=1)**
+* ☕ **[Buy Me a Coffee](https://buymeacoffee.com/technicallynota)**
+* ▶️ **[Smart ROM Sorter Setup Guide](https://youtu.be/GAOdZ947ofs)**
+* ▶️ **[ROMLister Filtering Guide](https://youtu.be/IXWbLji_5Jo)**
+* ▶️ **[Arcade Database Hack Guide](https://youtu.be/KvEklx52CsI)**
+* ▶️ **[ClrMamePro Conversion Guide](https://youtu.be/miXMtHDUeb0)**
 
 ---
 
 ## 📜 License
-
-This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.
-
-* **Free to Share:** Copy and redistribute.
-* **Free to Adapt:** Remix and build upon.
-
-* **NonCommercial:** You cannot sell this tool.
-<img width="1918" height="1078" alt="Screenshot 2026-02-22 175255" src="https://github.com/user-attachments/assets/0cf8ca91-40ce-4779-a0ca-4f0b871dc667" />
-
-
+Licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**.
+Copyright (c) 2025-2026 Shawn Flanagan.
