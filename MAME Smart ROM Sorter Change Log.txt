@@ -1,0 +1,77 @@
+# 🛠️ MAME SMART ROM Sorter: THE COMPLETE MASTER CHRONICLES
+# Authors: Shawn Flanagan (TNT)
+# Format: Notepad++ Optimized Markdown
+
+## [THE EVOLUTION: v4.70 — v4.74] (CURRENT)
+
+### v4.74 — The Couch Co-op Update 
+* [cite_start]**UI:** Integrated mouse wheel scrolling support for the Genres tab[cite: 48].
+* [cite_start]**CONFIG:** Baked in the 'Couch Co-op' preset as the default factory state, optimized for modern controller setups[cite: 48].
+
+### v4.73 — Community & Guide Update
+* [cite_start]**RESOURCES:** Added standard "Play" buttons (▶️) for all video guides[cite: 46].
+* [cite_start]**LINKS:** Expanded dashboard to include NPlayers, AntoPISA GitHub, and the Polybius Archive[cite: 47].
+
+### v4.72 — Popularity Priority UI
+* [cite_start]**GUI:** Pinned legendary genres (Fighter, Shooter, etc.) to the top of the list with game examples (e.g., Pac-Man, SFII) to assist new users[cite: 44].
+* [cite_start]**LOGIC:** Maintained alphabetical sorting for all secondary arcade categories[cite: 45].
+
+### v4.71 — The Operations UX Fix
+* [cite_start]**UI:** Manual XML generation and INI downloads now properly lock the UI and trigger the progress bar[cite: 42].
+* [cite_start]**UX:** Prevents the "Phantom Bug" where users thought the app was frozen during the 5-minute XML creation process[cite: 43].
+
+### v4.70 — The Widescreen Geometry Fix
+* [cite_start]**GUI:** Implemented dynamic width-binding for the Genres tab[cite: 40].
+* [cite_start]**FIX:** The internal frame now stretches to the window edge, eliminating the "Big White Box" issue on widescreen monitors[cite: 41].
+
+---
+
+## [THE MODERN ENGINE ERA: v4.0 — v4.69]
+
+### v4.68 - v4.69 — Stability & Logic Cleanup
+* [cite_start]**v4.69:** Restored critical variable initializations for `is_bootleg` and `is_prototype` dropped during refactor[cite: 29].
+* [cite_start]**v4.68:** Switched `controls.ini` to a LEDBlinky mirror[cite: 27].
+* [cite_start]**SCRUB:** Removed `* Mature *` strings from UI genres, making the "Include Mature" checkbox the sole gatekeeper[cite: 28].
+
+### v4.58 - v4.67 — The Arcade Purity Bouncer
+* [cite_start]**v4.67:** VIP Bouncer added using `Working Arcade.ini` to definitively separate real arcade games from slot machines[cite: 26].
+* [cite_start]**v4.65:** Integrated `mess.ini` to block non-arcade systems (consoles, clocks) at the root level[cite: 25].
+* [cite_start]**v4.58:** Integrated `controls.ini` to identify "True Button Counts" and "Twin Stick" setups[cite: 24].
+
+### v4.50 / v4.50a — The "BobMerge" Milestone
+* [cite_start]**STABILITY:** Implemented `detect_set_type()` (Split vs. Merged) and the "God Object" Unified Metadata model[cite: 20]. 
+* [cite_start]**QC:** Introduced Invariant Count validation; the engine now checks metadata mapping density on startup to prevent "0-entry" filter failures[cite: 21, 22].
+* [cite_start]**FIX:** Attached all INI data directly to MachineData objects to prevent data drift[cite: 23].
+
+### v4.45 - v4.46 — The WarGames & God Mode Pivot
+* [cite_start]**v4.46:** Introduced the Universal INI Parser for the full ProgettoSnaps metadata suite[cite: 19].
+* [cite_start]**AUDIO:** Integrated `winsound` for audio cues (Joshua/WarGames "Game Over" voice).
+
+### v4.35 - v4.37 — UI & Automation
+* [cite_start]**v4.37:** Restructured into the Professional Sidebar + Tabbed Dashboard layout[cite: 16].
+* [cite_start]**v4.36:** Added real-time determinate Progress Bar and live file counter[cite: 15].
+* [cite_start]**v4.35:** Introduced the Smart Setup Wizard for XML generation and CatVer downloads[cite: 14].
+
+### v4.21 - v4.30 — Performance & Stability
+* [cite_start]**v4.30:** Implemented `ENOSPC` (Disk Full) detection and resolved the "Non-Merged Parent Trap"[cite: 13].
+* [cite_start]**v4.21:** Replaced DOM parsing with `iterparse` (Massive RAM reduction)[cite: 12].
+* [cite_start]**1G1R:** Introduced **One Game One ROM** Mode[cite: 12].
+
+### v4.07 — Deep Scan Integration
+* [cite_start]**LOGIC:** Rewrote `_buttons_ok` to perform a "Deep Scan" of individual XML tags to catch missed button requirements[cite: 11].
+
+---
+
+## [THE EARLY PYTHON & DARK AGES]
+
+### v1.0.1 - v3.x — The Parser Struggles
+* [cite_start]**BUG FIX:** Resolved the `[ROOT_FOLDER]` header bug that caused 0-entry returns for Mature/Bootleg sets[cite: 9].
+* [cite_start]**REGRESSION:** Fixed the CatVer error where version numbers were ingested as Genres[cite: 10].
+
+---
+
+## [PRE-HISTORY: THE BATCH ERA]
+
+### v0.0.1 — The Notepad++ Discovery (Dec 2022)
+* [cite_start]**CONCEPT:** Project began as a manual hack using Arcade Database (ADB) batch exports[cite: 5].
+* [cite_start]**MILESTONE:** First proof-of-concept for filtering MAME sets by Control Type for DIY cabinets[cite: 7].
