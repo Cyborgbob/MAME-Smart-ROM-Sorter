@@ -2,7 +2,11 @@
 # Authors: Shawn Flanagan (TNT)
 # Format: Notepad++ Optimized Markdown
 
-## [THE EVOLUTION: v4.70 — v4.74] (CURRENT)
+## [THE EVOLUTION: v4.70 — v4.76] (CURRENT)
+
+### v4.76 — The Smart Link Update
+* **ENGINE:** Added "Smart Copy" using instantaneous hard links for same-drive transfers, resulting in zero extra disk space usage.
+* **BUILD:** Upgraded to a true standalone `.exe` using PyInstaller, fully bundling the TNT logo and audio cues directly inside the executable.
 
 ### v4.74 — The Couch Co-op Update 
 * [cite_start]**UI:** Integrated mouse wheel scrolling support for the Genres tab[cite: 48].
