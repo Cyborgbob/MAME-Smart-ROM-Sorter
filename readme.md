@@ -19,11 +19,18 @@ Because this program is a standalone `.exe` built by independent creators and no
 ## What is This Tool? 🤔
 The **MAME Smart ROM Sorter** turns an overwhelming, multi-thousand-file MAME set into a **clean, curated, arcade-only collection** perfectly tailored to your hardware limits.
 
-### ✨ v4.74 Featured Upgrades
-* **Custom "TNT" Icon:** Includes the new custom arcade cabinet branding for a professional desktop experience.
-* **"Couch Co-op" Ready:** Defaults to a modern controller preset (4 Players / 8 Buttons).
-* **God Mode Metadata:** Integrates ProgettoSnaps and Controls.ini to definitively separate "Real Arcade" games from junk devices, slot machines, and mahjong boards.
-* **Hardware-Aware Engine:** Automatically identifies and copies required BIOS sets, CHDs, and Audio Samples needed for your specific collection.
+### Key Features
+The MAME Smart ROM Sorter is a powerful, offline GUI tool designed to automate the heavy lifting of curating your arcade collection.
+
+The 1G1R Engine (One Game, One ROM): Automatically filter out thousands of unnecessary clones and regional duplicates to create a lean, playable master list.
+
+"God Mode" Metadata Filtering: Go beyond basic sorting. Filter your ROMs by specific arcade cabinet control types, exact button counts, screen orientation (vertical/horizontal), and genre.
+
+100% Offline Processing: Completely rebuilt to process your full.xml locally. No more waiting on slow web-scraping from online arcade databases or dealing with API timeouts.
+
+Auto-Remove Junk Data: Instantly strip out unplayable games, casino/gambling machines, mahjong games, and mechanical fruit machines with a single click.
+
+Export & File Moving: Once your list is perfectly curated, the tool will automatically copy the exact .zip and .chd files you need into a fresh, ready-to-play folder for your emulator or front-end.
 
 ---
 
@@ -123,6 +130,23 @@ This tool stands on the shoulders of giants. We want to extend a massive **Thank
 * ▶️ **[ROMLister Filtering Guide](https://youtu.be/IXWbLji_5Jo)**
 * ▶️ **[Arcade Database Hack Guide](https://youtu.be/KvEklx52CsI)**
 * ▶️ **[ClrMamePro Conversion Guide](https://youtu.be/miXMtHDUeb0)**
+
+
+### ❓ Frequently Asked Questions (F.A.Q.)
+How do I sort and organize my MAME ROMs?
+The MAME Smart ROM Sorter automates this process by reading the official MAME full.xml file. Simply point the tool at your messy ROM folder, select your preferred filters (like "Working Games Only"), and the sorter will extract and copy only the playable arcade games into a new, organized directory.
+
+How do I remove MAME clones and create a 1G1R set?
+Our built-in 1G1R (One Game, One ROM) engine analyzes the parent/clone relationships in your MAME set. By enabling this feature, the tool will automatically prioritize the primary parent ROM (usually the US or World release) and ignore redundant regional clones, saving you massive amounts of hard drive space.
+
+Can I filter MAME games by the number of buttons on my arcade cabinet?
+Yes. Using the "God Mode" metadata filters, you can tell the software to only export games that match your specific home arcade control panel. For example, you can easily create a list of games that only use a joystick and 3 buttons or fewer.
+
+How do I remove casino, gambling, and mahjong games from MAME?
+The MAME Smart ROM sorter includes dedicated toggle switches to instantly block non-arcade genres. Simply check the boxes to exclude Casino, Mahjong, Fruit Machines, and Unplayable games before you run your export.
+
+Does this tool require an internet connection to scrape database info?
+Kind of! Previous versions only used the native MAME XML data from MAME. If you have an internet connection, then this tool will download INI files with a ton of community built arcade data. After downloading the INI files the system is 100% local. This makes the sorting process incredibly fast and completely private. However, the system can work off of the XML alone, BUT it is not as accurate. 
 
 ---
 
