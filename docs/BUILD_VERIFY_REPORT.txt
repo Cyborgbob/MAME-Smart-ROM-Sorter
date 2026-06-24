@@ -1,0 +1,13 @@
+Build Verify Report — MAME Smart ROM Sorter v5.0 Final Split-License Package
+
+Python compile check:
+PASS  main.py
+PASS  sorter_engine.py
+PASS  sorter_gui.py
+PASS  sorter_shared.py
+
+Package hygiene checks:
+- No ROMs, BIOS files, CHDs, or samples intentionally included.
+- No `__pycache__` or `.pyc` files intentionally included.
+- Source package preserves presets, images, sounds, icons, and build spec.
+- License files updated for simple split-license model.
