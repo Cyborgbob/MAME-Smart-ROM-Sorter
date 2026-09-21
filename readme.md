@@ -64,7 +64,7 @@ This project is a sorting/curation tool. It is not a ROM site, downloader, emula
 
 ## Recommended ROM set type
 
-For best results, use a **non-merged MAME ROM set**.
+You MUST use a **non-merged MAME ROM set**.
 
 Why? A non-merged set is easier to curate because each game ZIP is more self-contained. Merged and split sets can work in some cases, but they are more likely to create missing parent, BIOS, device, sample, or CHD dependency problems after copying.
 
